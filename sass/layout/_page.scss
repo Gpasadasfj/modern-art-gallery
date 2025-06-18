@@ -1,0 +1,13 @@
+@use "../abstracts/index" as *;
+
+.page {
+  margin: auto;
+  max-width: 375px;
+  @include breakpoint(tablet) {
+    max-width: $bp-tablet;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: $bp-desktop;
+  }
+}

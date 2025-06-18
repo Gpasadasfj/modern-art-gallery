@@ -1,0 +1,59 @@
+@use "../abstracts/index" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 0 0 1em 0;
+}
+
+.title-a {
+  @include title(m);
+  @include breakpoint(tablet) {
+    @include title(l);
+  }
+  @include breakpoint(desktop) {
+    @include title(xl);
+  }
+}
+
+.title-b {
+  @include title(s);
+  @include breakpoint(desktop) {
+    @include title(m);
+  }
+}
+
+.title-c {
+  @include title(xxs);
+  @include breakpoint(desktop) {
+    @include title(xs);
+  }
+}
+
+.title-d {
+  @include title(s);
+  @include breakpoint(desktop) {
+    @include title(l);
+  }
+}
+
+.text-a {
+  @include text(s);
+  @include breakpoint(desktop) {
+    @include text(m);
+  }
+}
+
+.text-b {
+  @include text(xs);
+  @include breakpoint(desktop) {
+    @include text(s);
+  }
+}

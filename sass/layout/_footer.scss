@@ -1,0 +1,82 @@
+@use "../abstracts/index" as *;
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 48px 32px;
+  margin-top: -180px;
+  @include breakpoint(tablet) {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  @include breakpoint(desktop) {
+    margin-top: 180px;
+  }
+  &_text {
+    margin-top: 38px;
+    color: $white;
+    @include breakpoint(tablet) {
+      margin-top: 0;
+      max-width: 281px;
+    }
+    @include breakpoint(desktop) {
+      max-width: 430px;
+    }
+  }
+  &_icons {
+    margin-top: 38px;
+    display: flex;
+    gap: 10px;
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+    &_link {
+      padding: 10px;
+      padding-left: 0;
+      &_item {
+        color: $white;
+      }
+    }
+  }
+}
+
+.location_footer {
+  background-color: $brown;
+  color: $black;
+  padding: 48px 32px;
+  margin-top: -20px;
+  @include breakpoint(tablet) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  &_text {
+    margin-top: 38px;
+    color: $black;
+    @include breakpoint(tablet) {
+      max-width: 281px;
+      margin-top: 0;
+    }
+    @include breakpoint(desktop) {
+      max-width: 430px;
+    }
+  }
+
+  &_icons {
+    margin-top: 38px;
+    display: flex;
+    gap: 10px;
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+    &_link {
+      padding: 10px;
+      padding-left: 0;
+      &_item {
+        color: $black;
+      }
+    }
+  }
+}

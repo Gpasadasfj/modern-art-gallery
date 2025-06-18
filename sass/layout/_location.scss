@@ -1,0 +1,118 @@
+@use "../abstracts/index" as *;
+
+.location {
+  overflow: hidden;
+  &_button {
+    position: relative;
+    z-index: 1;
+    @include breakpoint(tablet) {
+      margin-left: 40px;
+    }
+    @include breakpoint(desktop) {
+      margin-left: 155px;
+    }
+    .text-link {
+      margin-left: 0px;
+      width: 200px;
+      text-align: center;
+    }
+  }
+  &_container {
+    position: relative;
+    top: -79px;
+    right: 13px;
+    height: 500px;
+    width: 1207px;
+    @include breakpoint(desktop) {
+      width: 100%;
+      top: -79px;
+      right: 0;
+      overflow: hidden;
+      height: 550px;
+    }
+    &_map {
+      position: absolute;
+      top: -39px;
+      left: -400px;
+      filter: grayscale(100%) brightness(0.8) contrast(1.4);
+      @include breakpoint(tablet) {
+        left: -208px;
+      }
+      @include breakpoint(desktop) {
+        left: 0;
+      }
+    }
+  }
+  &_marker {
+    position: absolute;
+    display: inline;
+    z-index: 2;
+    top: 202px;
+    right: 153px;
+    @include breakpoint(tablet) {
+      top: 20%;
+      right: 46%;
+    }
+    @include breakpoint(desktop) {
+      top: 26%;
+      right: 47.5%;
+    }
+  }
+  &_info {
+    background-color: $black;
+    margin-top: -50px;
+    padding: 0px 16px;
+    @include breakpoint(tablet) {
+      display: flex;
+      height: 435px;
+      padding: 80px 40px;
+      justify-content: space-around;
+    }
+    @include breakpoint(desktop) {
+      margin-top: -90px;
+      height: 550px;
+    }
+    &_box1 {
+      @include breakpoint(tablet) {
+        max-width: 225px;
+      }
+      &_title {
+        color: $white;
+        padding: 48px 0px;
+        @include breakpoint(tablet) {
+          padding-top: 0px;
+        }
+      }
+    }
+    &_box2 {
+      @include breakpoint(tablet) {
+        flex-direction: column;
+      }
+      &_street {
+        color: $brown;
+        margin-bottom: 20px;
+        @include breakpoint(tablet) {
+          margin-bottom: 0;
+        }
+        @include breakpoint(desktop) {
+          margin-bottom: 24px;
+        }
+      }
+      &_adress {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        @include breakpoint(desktop) {
+          margin-bottom: 32px;
+        }
+      }
+      &_text {
+        color: $white;
+        padding-bottom: 56px;
+        @include breakpoint(tablet) {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

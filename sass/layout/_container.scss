@@ -1,0 +1,16 @@
+@use "../abstracts/index" as *;
+
+.container {
+  padding: 0px 16px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  top: -325px;
+  z-index: 1;
+  @include breakpoint(tablet) {
+    top: 0px;
+    background-color: transparent;
+  }
+}

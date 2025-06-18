@@ -1,0 +1,8 @@
+@use "../abstracts/index" as *;
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
+  font-family: $primary-font;
+}

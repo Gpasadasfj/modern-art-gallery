@@ -1,0 +1,65 @@
+@use "../abstracts/index" as *;
+
+.img-box {
+  @include breakpoint(desktop) {
+    position: relative;
+    background-image: linear-gradient(to right, $black 50%, $white 50%, $white);
+    z-index: 0;
+    height: 800px;
+  }
+  &_principal-img {
+    position: relative;
+    top: -150px;
+    z-index: -1;
+    @include breakpoint(tablet) {
+      width: 437px;
+      height: 700px;
+      position: absolute;
+      top: 0px;
+      z-index: -1;
+    }
+    @include breakpoint(desktop) {
+      width: 540px;
+      height: 800px;
+      left: 33.33%;
+      position: relative;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  background-color: $white;
+  z-index: 1;
+  @include breakpoint(tablet) {
+    background-color: transparent;
+    position: relative;
+    width: 345px;
+    top: 113px;
+    right: -368px;
+  }
+  @include breakpoint(desktop) {
+    position: absolute;
+    top: -835px;
+    right: 151px;
+  }
+  &_title {
+    width: 83%;
+    margin-top: 32px;
+    @include breakpoint(desktop) {
+      position: relative;
+      left: -748px;
+      top: 212px;
+      width: 160%;
+      color: $white;
+    }
+  }
+
+  &_text {
+    margin-top: 32px;
+  }
+
+  &_button {
+    margin-top: 32px;
+  }
+}
