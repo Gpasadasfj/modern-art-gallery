@@ -1,4 +1,4 @@
 import { defineConfig } from "vite";
 export default defineConfig({
-  base: "./", // Use rutas relativas en los enlaces generados en el HTML
+  base: "/modern-art-gallery", // Use rutas relativas en los enlaces generados en el HTML
 });
